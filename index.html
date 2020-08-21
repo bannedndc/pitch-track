@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <title>Pitch tracking app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This app pitch tracks your voice and tells you your pitch">
+    <style>
+      /* Step 4 */
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+      }
+
+      #note {
+        font-size: 72px;
+      }
+
+      .flat {
+        color: blue;
+      }
+
+      .sharp {
+        color: red;
+      }
+
+      .in-tune {
+        color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Pitch tracker</h1>
+      <!-- When the button says "Enable microphone", that means we aren't trying to pitch track your microphone -->
+      <!-- When the button says "Disable microphone", that means we are trying to pitch track your microphone -->
+      <button id="enable-mic" data-tracking="false">Enable microphone</button>
+
+      <br><br>
+      
+      <div id="note">-</div> <!-- note name (C, C#, D, etc) -->
+      <div id="hz">-</div> <!-- frequency of your voice in hertz -->
+      <div id="detune">-</div> <!-- cents off from pitch -->
+      <div id="detune-warning">-</div> <!-- flat or sharp -->
+    </div>
+    <script src="js/pitchtrack.js"></script>
+  </body>
+
+</html>
+
